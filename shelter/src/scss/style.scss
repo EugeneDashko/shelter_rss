@@ -1,0 +1,43 @@
+@import "normalize";
+@import "reset";
+@import "fonts";
+// Google Fonts: https://fonts.google.com/
+// Каталог шрифтов: https://nomail.com.ua/
+// Конвертер шрифтов: https://transfonter.org/
+
+
+
+//default style's
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia';
+    color: #000;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@import "blocks/header";
+@import "blocks/notOnly";
+@import "blocks/about";
+@import "blocks/looking";
+@import "blocks/help";
+@import "blocks/donation";
+@import "blocks/footer";
+
+@import "blocks/petsHeader";
+@import "blocks/petsLooking";
+
+// @import "blocks/catalog";
+// @import "blocks/count";
+// @import "blocks/product";
+// @import "blocks/footer";
+// @import "blocks/modal";
+// @import "mediaQueries";
+

@@ -1,0 +1,155 @@
+.about {
+    background-color: #fff;
+}
+
+.about__container {
+    padding: 0 40px;
+}
+
+.about__wrapper {
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items:center;
+    column-gap: 9.89%;
+    margin-bottom: 100px;
+}
+
+.about__article {
+    max-width: 36.34%;
+}
+
+.about__image {
+    margin-left: 14.58%;
+    max-width: 25.36%;
+}
+
+.about__article_title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-bottom: 25px;
+}
+
+.about__article_text {
+    max-width: 430px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+    margin-top:6%;
+}
+
+
+@media (max-width: 768px) {
+
+    .about__container {
+        padding: 0 30px;
+    }
+    .about__wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .about__article {
+        order: 1;
+        max-width: 60.73%;
+    }
+
+    .about__article_title {
+        margin-bottom: 5.4%;
+    }
+
+    .about__article_text {
+        margin: 0;
+        margin-bottom: 5.9%;
+    }
+
+    .about__article_subtext {
+        margin-bottom: 18.6%;
+    }
+
+    .about__image {
+        order: 2;
+        margin-left: 0;
+        max-width: 42.37%;
+    }
+}
+
+@media (max-width: 698px) {
+    .carousel__item {
+
+    }
+    .carousel {
+
+    }
+    .looking__wrapper {
+
+    }
+}
+
+@media (max-width: 590px) {
+    .about__article {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .about__container {
+        padding: 0 30px;
+    }
+
+    .about__wrapper {
+        padding-top: 42px;
+        column-gap: 9.89%;
+        margin-bottom: 42px;
+    }
+
+    .about__article {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+
+    .about__article_title {
+        font-size: 25px;
+        line-height: 130%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .about__article_text {
+        text-align: justify;
+    }
+
+    .about__article_subtext {
+        margin-bottom: 42px;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .about__container {
+        padding: 0 10px;
+    }
+
+    .about__article_text {
+        margin-bottom: 7.33%;
+    }
+
+    .about__image {
+        max-width: 86.66%;
+    }
+
+    .about__article_subtext {
+        margin-bottom: 42px;
+    }
+}

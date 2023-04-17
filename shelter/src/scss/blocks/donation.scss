@@ -1,0 +1,190 @@
+.donation {
+    background-color: #F6F6F6;
+}
+.donation__container {
+    padding: 80px 40px 100px;
+}
+
+.donation__img {
+    width: 505px;
+}
+
+.donation__image {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.donation__wrapper {
+    max-width: 915px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.donation__info {
+    margin-top: 3px;
+    max-width: 380px;
+}
+.donation__info_title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-bottom: 20px;
+    margin-top: -2px;
+}
+
+.donation__info_subtitle {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-bottom: 18px;
+}
+
+
+.donation__but {
+    width: 349px;
+    height: 43px;
+    background: #F1CDB3;
+    border-radius: 9px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    align-items: center;
+    color: #545454;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 15px;
+    background-image: url('@img/credit-card.svg');
+    background-repeat: no-repeat;
+    background-position: 15px ;
+}
+
+.donation__info-text {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    color: #B2B2B2;
+}
+
+
+@media (max-width:455px) {
+
+    .donation__container {
+        padding: 42px 10px;
+    }
+    .donation__wrapper {
+        text-align: center;
+        gap: 32px;
+    }
+    .donation__info {
+        margin-top: 0;
+        margin-left: -2px;
+
+    }
+    .donation__img{
+        max-width: 260px;
+        margin-left: 1px;
+    }
+
+    .donation__info_title {
+        font-size: 25px;
+        line-height: 125%;
+        align-items: center;
+        letter-spacing: .06em;
+        color: #545454;
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    .donation__info-text {
+        max-width: 280px;
+        font-size: 12px;
+        line-height: 18px;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .donation__but {
+        max-width: 281px;
+        min-height: 43px;
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: .05em;
+        margin-bottom: 20px;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+
+    .donation__info_subtitle {
+        margin-bottom: 24px;
+        letter-spacing: 0;
+
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+        .donation__container {
+        padding: 80px 30px 100px;
+    }
+
+    .donation__info {
+        margin-top: 2px;
+        margin-left: -2px;
+        order: 1;
+    }
+
+    .donation__img {
+        order: 2;
+    }
+    .donation__image {
+        margin-left: -2px;
+    }
+
+    .donation__info_subtitle {
+        margin-bottom: 19px;
+    }
+    .donation__but {
+        letter-spacing: 0.058em;
+    }
+    .donation__wrapper {
+        row-gap: 50px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .donation__container {
+        padding: 40px 10px 0;
+        padding-bottom: 26px;
+        padding-bottom: 42px;
+    }
+    .donation__wrapper {
+        row-gap: 32px;
+    }
+    .donation__info_subtitle {
+        margin-bottom: 23px;
+    }
+}

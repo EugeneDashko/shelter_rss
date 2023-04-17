@@ -1,0 +1,139 @@
+.looking__title_pets {
+    margin-bottom: 4.8%;
+}
+
+.looking__wrapper_pets {
+    padding: 0;
+}
+
+.carousel_pets {
+    left: 0;
+}
+
+.carousel__wrapper-pets {
+    max-width: 100%;
+    // max-height: 900px;
+    // overflow-x: auto;
+    overflow: hidden;
+}
+
+.carousel__item-pet {
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+
+.button__list_pets {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__item_pets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #FDDCC4;
+    border-radius: 100px;
+    cursor: pointer;
+
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+
+        &:hover:not(.disabled, .button__item_active)  {
+            background-color: #FDDCC4;
+            transition: .3s;
+        }
+        &:active:not(.disabled, .button__item_active) {
+            transform: scale(1);
+            border: 2px solid #F1CDB3;
+            background-color: #F1CDB3;
+            transition: .3s;
+        }
+}
+
+.button__item_pets.disabled {
+    border: 2px solid #CDCDCD;
+}
+
+.disabled {
+    cursor:default;
+}
+
+.button__item_pets-active {
+    background: #F1CDB3;
+    border:none;
+    cursor:default;
+}
+
+@media (max-width: 768px) {
+    .carousel_pets {
+
+    }
+    .carousel__item-pet {
+        margin-left: 0;
+    }
+    .looking__container_pets {
+        padding-bottom: 76px;
+    }
+
+    .carousel__item-pet {
+        max-height: 1365px;
+        overflow-y: hidden;
+    }
+
+    .looking__title_pets {
+        margin-bottom: 4%;
+    }
+
+    .looking__wrapper_pets {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 410px) {
+    .button__list_pets {
+        column-gap: 10px;
+    }
+    .looking__container_pets {
+        padding-top: 41px;
+        padding-bottom: 41px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    .looking__title_pets {
+        margin-bottom: 13.3%;
+    }
+
+    // .looking__container_pets {
+    //     padding-top: 41px;
+    //     padding-bottom: 41px;
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    // }
+    .carousel__item-pet {
+        row-gap: 41px;
+    }
+
+
+    .looking__wrapper_pets {
+        margin-bottom: 43px;
+    }
+}
+
