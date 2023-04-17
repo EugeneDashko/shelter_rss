@@ -112,6 +112,7 @@ const cards = [
     const CAROUSEL = document.querySelector('#carousel');
     const ITEM_LEFT =  document.querySelector('#item-left');
     const ITEM_RIGHT =  document.querySelector('#item-right');
+    const ITEM_ACTIVE = document.querySelector('#item-active');
 
     //Burger ==============================Burger ===========================
 
@@ -202,13 +203,36 @@ const cards = [
         BTN_LEFT.removeEventListener("click", moveLeft);
     };
 
+    
+
     BTN_LEFT.addEventListener("click", moveLeft);
     BTN_RIGHT.addEventListener("click", moveRight);
+
     let nextCart = [];
+
+    (function() {
+      ITEM_ACTIVE.innerHTML = '';
+      console.log(ITEM_ACTIVE);
+      let randomResult = randomGenerateNum(nextCart);
+      nextCart = [...randomResult]
+      randomResult.forEach(item => {
+      let carouselCard = document.createElement("div");
+      carouselCard.classList.add('carousel__card');
+      carouselCard.innerHTML = `
+      <img class="carousel__card_img" src="${cards[item].img}" alt="${cards[item].type}"/>
+      <h4 class="carousel__card_name">"${cards[item].name}"</h4>
+      <button class="carousel__card_btn">Learn more</button>
+      `;
+      ITEM_ACTIVE.appendChild(carouselCard);
+      })
+    }())
+
+
     CAROUSEL.addEventListener("animationend",(animationEvent) => {
         if(animationEvent.animationName === "move-left") {
             CAROUSEL.classList.remove("transition-left");
-            document.querySelector('#item-active').innerHTML = ITEM_LEFT.innerHTML;
+            ITEM_RIGHT.innerHTML = ITEM_ACTIVE.innerHTML
+            ITEM_ACTIVE.innerHTML = ITEM_LEFT.innerHTML;
             ITEM_LEFT.innerHTML = "";
             let randomResult = randomGenerateNum(nextCart);
             nextCart = [...randomResult]
@@ -217,7 +241,7 @@ const cards = [
             carouselCard.classList.add('carousel__card');
             carouselCard.innerHTML = `
             <img class="carousel__card_img" src="${cards[item].img}" alt="${cards[item].type}"/>
-            <h4 class="carousel__card_name">${cards[item].name}</h4>
+            <h4 class="carousel__card_name">"${cards[item].name}"</h4>
             <button class="carousel__card_btn">Learn more</button>
             `;
             ITEM_LEFT.appendChild(carouselCard);
@@ -225,7 +249,8 @@ const cards = [
 
         } else {
             CAROUSEL.classList.remove("transition-right");
-            document.querySelector('#item-active').innerHTML = ITEM_RIGHT.innerHTML;
+            ITEM_LEFT.innerHTML =  ITEM_ACTIVE.innerHTML
+            ITEM_ACTIVE.innerHTML = ITEM_RIGHT.innerHTML;
             ITEM_RIGHT.innerHTML = "";
             let randomResult = randomGenerateNum(nextCart);
             nextCart = [...randomResult]
@@ -234,7 +259,7 @@ const cards = [
             carouselCard.classList.add('carousel__card');
             carouselCard.innerHTML = `
             <img class="carousel__card_img" src="${cards[item].img}" alt="${cards[item].type}"/>
-            <h4 class="carousel__card_name">${cards[item].name}</h4>
+            <h4 class="carousel__card_name">"${cards[item].name}"</h4>
             <button class="carousel__card_btn">Learn more</button>
             `;
             ITEM_RIGHT.appendChild(carouselCard);
