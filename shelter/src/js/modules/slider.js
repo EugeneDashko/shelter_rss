@@ -1,4 +1,7 @@
-export const randomGenerateBlock =  (arg) => {
+import { cardsPets } from "./pets.js";
+import {ITEM_ACTIVE, ITEM_LEFT, ITEM_RIGHT} from "./constants.js"
+
+const getCards =  (arg) => {
     let arrRandom = [];
     let randomInt = () => Math.floor(Math.random() * 7);
     if(!arg.length) {
@@ -18,24 +21,40 @@ export const randomGenerateBlock =  (arg) => {
         if(arg.includes(randomNum)) {
             continue
         }
-        
+
         arrRandom.push(randomNum);
     }
     return arrRandom;
 };
 
-function createComponent (cardsPets) {
-    if(!Array.isArray(cardsPets)) {
-      throw TypeError(`Slider error. Pets array is invalid.`);
-    }
-    const component = document.createElement('div');
-    component.classList.add('carousel__card');
-    component.innerHTML = `
-    <img class="carousel__card_img" src="${cardsPets[pet].img}" alt="${cardsPets[pet].type}">
-    <h4 class="carousel__card_name">Katrine</h4>
-    <button class="carousel__card_btn">Learn more</button>
-    `;
-    return component;
-};
+const CARDS_SECTION = 3;
+const BLOCKS_CARDS = 3;
 
-export {createComponent}
+let createRundomNum;
+
+const newCardsPets = new Array();
+
+const pets = (arr) => {
+    arr.forEach(element => {
+        const componentDiv = document.createElement('div');
+        componentDiv.classList.add('carousel__card');
+        const componentImg = document.createElement('img');
+        componentImg.classList.add('carousel__card_img');
+        componentImg.src = element.img;
+        const componentH4 = document.createElement('h4');
+        componentH4.classList.add('carousel__card_name');
+        componentH4.innerText = element.name;
+        const componentButton = document.createElement('button');
+        componentButton.classList.add('carousel__card_btn');
+        componentButton.innerText = "Learn more";
+        componentDiv.append(componentImg,componentH4,componentButton);
+        newCardsPets.push(componentDiv)
+    });
+}
+pets(cardsPets);
+
+createRundomNum = getCards([]);
+createRundomNum.forEach(card => {
+    ITEM_ACTIVE.append(newCardsPets[card]);
+});
+

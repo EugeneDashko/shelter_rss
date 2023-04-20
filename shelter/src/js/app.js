@@ -1,8 +1,7 @@
 import * as flsFunction from "./modules/isWebp.js";
-import { cardsPets } from "./modules/pets.js";
 import { BTN_LEFT, BTN_RIGHT, CAROUSEL, ITEM_LEFT, ITEM_RIGHT, ITEM_ACTIVE} from "./modules/constants.js";
-import { createComponent, randomGenerateBlock } from "./modules/slider.js";
 import { burger } from "./modules/burger.js";
+import {slider} from "./modules/slider.js"
 flsFunction.isWebp();
 //============================================================================================
 
@@ -10,7 +9,6 @@ flsFunction.isWebp();
 (function() {
 
     burger();
-    console.log(createComponent(cardsPets));
     const moveLeft = () => {
         CAROUSEL.classList.add("transition-left");
         BTN_LEFT.removeEventListener("click", moveLeft);
@@ -67,7 +65,5 @@ flsFunction.isWebp();
         BTN_LEFT.addEventListener("click", moveLeft);
         BTN_RIGHT.addEventListener("click", moveRight);
     });
-
-        //Carousel==============================Carousel Main===========================
 }())
 
