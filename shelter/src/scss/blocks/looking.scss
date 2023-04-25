@@ -55,18 +55,21 @@
 .carousel {
     gap: 88px;
     position: relative;
-    left: -88px;
+    left: -986px;
     flex-direction: row;
     justify-content: flex-start;
+}
+#item-left {
+    width: 986px;
 }
 
 @keyframes move-right {
     from {
-        left: -88px;
+        left:  -1074px;
     }
 
     to {
-        left: -1074px;
+        left: -2148px;
     }
 }
     .transition-right {

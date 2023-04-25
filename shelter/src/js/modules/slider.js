@@ -1,7 +1,7 @@
 import { cardsPets } from "./pets.js";
 import {ITEM_ACTIVE, ITEM_LEFT, ITEM_RIGHT} from "./constants.js"
 
-const getCards =  (arg) => {
+export const getCards =  (arg) => {
     let arrRandom = [];
     let randomInt = () => Math.floor(Math.random() * 7);
     if(!arg.length) {
@@ -27,12 +27,13 @@ const getCards =  (arg) => {
     return arrRandom;
 };
 
+
 const CARDS_SECTION = 3;
 const BLOCKS_CARDS = 3;
 
-let createRundomNum;
+export let createRundomNum;
 
-const newCardsPets = new Array();
+export const newCardsPets = new Array();
 
 const pets = (arr) => {
     arr.forEach(element => {
