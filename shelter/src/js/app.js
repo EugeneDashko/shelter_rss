@@ -31,7 +31,7 @@ BTN_RIGHT.addEventListener("click", moveRight);
 CAROUSEL.addEventListener("animationend",(animationEvent) => {
     if(animationEvent.animationName === "move-left") {
         CAROUSEL.classList.remove("transition-left");
-        // ITEM_LEFT.innerHTML = '';
+        ITEM_LEFT.innerHTML = '';
         let randomResult = getCards(createRundomNum);
         randomResult.forEach(card => {
             ITEM_LEFT.appendChild(newCardsPets[card]);

@@ -34,6 +34,7 @@ const BLOCKS_CARDS = 3;
 export let createRundomNum;
 
 export const newCardsPets = new Array();
+console.log('newCardsPets: ', newCardsPets);
 
 const pets = (arr) => {
     arr.forEach(element => {
