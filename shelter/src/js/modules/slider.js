@@ -1,9 +1,15 @@
 import { cardsPets } from "./pets.js";
 import {ITEM_ACTIVE, ITEM_LEFT, ITEM_RIGHT} from "./constants.js"
 
+
+export let newCardsPets = new Array();
+
+export let createActive, createLeft;
+
+
 export const getCards =  (arg) => {
     let arrRandom = [];
-    let randomInt = () => Math.floor(Math.random() * 7);
+    let randomInt = () => Math.floor(Math.random() * 8);
     if(!arg.length) {
         while(arrRandom.length < 3) {
             let randomNum = randomInt();
@@ -31,10 +37,8 @@ export const getCards =  (arg) => {
 const CARDS_SECTION = 3;
 const BLOCKS_CARDS = 3;
 
-export let createRundomNum;
 
-export const newCardsPets = new Array();
-console.log('newCardsPets: ', newCardsPets);
+
 
 const pets = (arr) => {
     arr.forEach(element => {
@@ -55,8 +59,16 @@ const pets = (arr) => {
 }
 pets(cardsPets);
 
-createRundomNum = getCards([]);
-createRundomNum.forEach(card => {
+
+createActive = getCards([]);
+createActive.forEach(card => {
     ITEM_ACTIVE.append(newCardsPets[card]);
 });
+
+createLeft = getCards(createActive);
+createLeft.forEach(card => {
+    ITEM_LEFT.appendChild(newCardsPets[card]);
+});
+
+ITEM_RIGHT.innerHTML = ITEM_LEFT.innerHTML
 

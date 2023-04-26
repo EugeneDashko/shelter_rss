@@ -1,7 +1,7 @@
 import * as flsFunction from "./modules/isWebp.js";
 import { BTN_LEFT, BTN_RIGHT, CAROUSEL, ITEM_LEFT, ITEM_RIGHT, ITEM_ACTIVE} from "./modules/constants.js";
 import { burger } from "./modules/burger.js";
-import {createRundomNum, getCards, newCardsPets} from "./modules/slider.js"
+import {createActive, getCards, newCardsPets, createLeft,  } from "./modules/slider.js"
 flsFunction.isWebp();
 //============================================================================================
 
@@ -32,9 +32,9 @@ CAROUSEL.addEventListener("animationend",(animationEvent) => {
     if(animationEvent.animationName === "move-left") {
         CAROUSEL.classList.remove("transition-left");
         ITEM_LEFT.innerHTML = '';
-        let randomResult = getCards(createRundomNum);
+        let randomResult = getCards(createLeft);
         randomResult.forEach(card => {
-            ITEM_LEFT.appendChild(newCardsPets[card]);
+            ITEM_LEFT.append(newCardsPets[card]);
         });
         ITEM_LEFT.innerHTML = ITEM_ACTIVE.innerHTML;
     } else {
