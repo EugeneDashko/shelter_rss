@@ -4,7 +4,7 @@ import {ITEM_ACTIVE, ITEM_LEFT, ITEM_RIGHT} from "./constants.js"
 
 export let newCardsPets = new Array();
 
-export let createActive, createLeft;
+export let createActive, createNewCards;
 
 
 export const getCards =  (arg) => {
@@ -65,8 +65,8 @@ createActive.forEach(card => {
     ITEM_ACTIVE.append(newCardsPets[card]);
 });
 
-createLeft = getCards(createActive);
-createLeft.forEach(card => {
+createNewCards= getCards(createActive);
+createNewCards.forEach(card => {
     ITEM_LEFT.appendChild(newCardsPets[card]);
 });
 
